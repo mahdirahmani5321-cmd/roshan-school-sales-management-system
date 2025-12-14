@@ -1,0 +1,1 @@
+(NULL, 'mahdi', 'rahmani', 'mahdirahmani@gmail.com', MD5('admin123'), NULL, current_timestamp(), current_timestamp());
