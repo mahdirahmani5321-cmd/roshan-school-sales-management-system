@@ -19,7 +19,7 @@ $productCount = mysqli_fetch_assoc(mysqli_query($conn, $productCountQuery))['tot
 $categoryCount = mysqli_fetch_assoc(mysqli_query($conn, $categoryCountQuery))['total_categories'];
 ?>
 
-<div class="container">
+<div class="container mt-5">
     <h1 class="mb-4">
         Dashboard
     </h1>

@@ -59,13 +59,13 @@
                     <form action="#" method="POST" class="needs-validation" novalidate>
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" required>
+                            <input type="email" placeholder="Your email like (example@gmail.com)" name="email" class="form-control" required>
                             <div class="invalid-feedback">Please enter a valid email</div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control" required minlength="6">
+                            <input type="password" placeholder="Your account password" name="password" class="form-control" required minlength="6">
                             <div class="invalid-feedback">Password must be at least 6 characters</div>
                         </div>
 
