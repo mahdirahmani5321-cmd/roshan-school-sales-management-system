@@ -16,7 +16,7 @@
 
                 <ul class="navbar-nav flex-row flex-nowrap mb-0">
                     <li class="nav-item me-3"><a class="nav-link fw-bold active text-capitalize" href="./">👋🏻 <?= $_SESSION['username']; ?></a></li>
-                    <li class="nav-item me-3"><a class="nav-link" href="./">Dashboard</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="./">Home</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./users.php">Users</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./students.php">Students</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./product_category.php">Category</a></li>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item me-3"><a class="nav-link" href="./">Dashboard</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="./">Home</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./users.php">Users</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./students.php">Students</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./product_category.php">Category</a></li>
