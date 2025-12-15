@@ -52,11 +52,18 @@
                                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['user_id']; ?>">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
+                                
+                                <!-- Edit Button -->
+                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#editPasswordModal<?php echo $row['user_id']; ?>">
+                                    <i class="bi bi-key"></i>
+                                </button>
 
                                 <!-- Delete Button -->
                                 <a href="./users_functions.php?delete_id=<?php echo $row['user_id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to deactivate this user?')">
                                     <i class="bi bi-trash3"></i>
                                 </a>
+
+
                             </td>
                         </tr>
                         
@@ -87,6 +94,39 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             <button type="submit" name="edit_user" class="btn btn-primary">Save Changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Update Password Modal -->
+                        <div class="modal fade" id="editPasswordModal<?php echo $row['user_id']; ?>" tabindex="-1" aria-labelledby="editPasswordModalLabel<?php echo $row['user_id']; ?>" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form action="./users_functions.php" method="POST">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="editPasswordModalLabel<?php echo $row['user_id']; ?>">Update Password User</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
+                                            <div class="mb-3">
+                                                <label class="form-label">Current Password</label>
+                                                <input type="password" name="current_password" class="form-control" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">New Password</label>
+                                                <input type="password" name="new_password" class="form-control" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Repeat Password</label>
+                                                <input type="password" name="repeat_new_password" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" name="update_user_password" class="btn btn-primary">Update Password</button>
                                         </div>
                                     </form>
                                 </div>

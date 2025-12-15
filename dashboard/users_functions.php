@@ -23,6 +23,33 @@
         exit;
     }
 
+        // Handle edit form submission
+    if (isset($_POST['update_user_password'])) {
+        $user_id = (int)$_POST['user_id'];
+        $current_password = mysqli_real_escape_string($conn, $_POST['current_password']);
+        $new_password = mysqli_real_escape_string($conn, $_POST['new_password']);
+        $re_passowrd = mysqli_real_escape_string($conn, $_POST['repeat_new_password']);
+
+        $queryCheckPassword = "SELECT user_id FROM users WHERE user_id = '$user_id' AND password = md5('$current_password')";
+        $result = mysqli_query($conn, $queryCheckPassword);
+        $row = mysqli_fetch_assoc($result);
+
+        if(!$row){
+            echo "Current Password User did not match !";
+            exit;
+        }
+
+        if($new_password !== $re_passowrd){
+            echo "New password and repeat password should match !";
+            exit;
+        }
+        
+        $queryUpdatePassword = "UPDATE users SET password = md5('$new_password') WHERE user_id = '$user_id'";
+        mysqli_query($conn, $queryUpdatePassword);
+        header("Location: ./users.php");
+        exit;
+        
+    }
 
     // Handle add new user form submission
     if (isset($_POST['add_user'])) {

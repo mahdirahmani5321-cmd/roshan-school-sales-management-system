@@ -5,18 +5,18 @@
 </div>
 
 <?php 
-include "./components/connection.php";
+    include "./components/connection.php";
 
-// Fetch counts for dashboard
-$userCountQuery = "SELECT COUNT(*) AS total_users FROM users";
-$studentCountQuery = "SELECT COUNT(*) AS total_students FROM students";
-$productCountQuery = "SELECT COUNT(*) AS total_products FROM products";
-$categoryCountQuery = "SELECT COUNT(*) AS total_categories FROM product_categories";
+    // Fetch counts for dashboard
+    $userCountQuery = "SELECT COUNT(*) AS total_users FROM users";
+    $studentCountQuery = "SELECT COUNT(*) AS total_students FROM students";
+    $productCountQuery = "SELECT COUNT(*) AS total_products FROM products";
+    $categoryCountQuery = "SELECT COUNT(*) AS total_categories FROM product_categories";
 
-$userCount = mysqli_fetch_assoc(mysqli_query($conn, $userCountQuery))['total_users'];
-$studentCount = mysqli_fetch_assoc(mysqli_query($conn, $studentCountQuery))['total_students'];
-$productCount = mysqli_fetch_assoc(mysqli_query($conn, $productCountQuery))['total_products'];
-$categoryCount = mysqli_fetch_assoc(mysqli_query($conn, $categoryCountQuery))['total_categories'];
+    $userCount = mysqli_fetch_assoc(mysqli_query($conn, $userCountQuery))['total_users'];
+    $studentCount = mysqli_fetch_assoc(mysqli_query($conn, $studentCountQuery))['total_students'];
+    $productCount = mysqli_fetch_assoc(mysqli_query($conn, $productCountQuery))['total_products'];
+    $categoryCount = mysqli_fetch_assoc(mysqli_query($conn, $categoryCountQuery))['total_categories'];
 ?>
 
 <div class="container mt-5">

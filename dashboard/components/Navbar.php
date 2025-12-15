@@ -22,7 +22,8 @@
                     <li class="nav-item me-3"><a class="nav-link" href="./product_category.php">Category</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./products.php">Products</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./sales.php">Sales</a></li>
-                    <li class="nav-item me-3"><a class="nav-link" href="#">Reports</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="./reports.php">Reports</a></li>
+
                 </ul>
 
                 <form class="d-flex flex-nowrap" action="./logout.php">
@@ -45,6 +46,7 @@
                     <li class="nav-item me-3"><a class="nav-link" href="./product_category.php">Category</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./products.php">Products</a></li>
                     <li class="nav-item me-3"><a class="nav-link" href="./sales.php">Sales</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="./reports.php">Reports</a></li>
                     </ul>
                     <form class="d-flex mt-3"  action="./logout.php">
                         <button class="btn btn-danger form-control" type="submit">Logout</button>
