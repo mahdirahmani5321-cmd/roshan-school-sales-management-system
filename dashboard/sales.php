@@ -103,7 +103,7 @@ include "./components/connection.php";
                                 <a href="./sales_functions.php?refund=<?= $row['sale_item_id']; ?>"
                                     class="btn btn-danger btn-sm"
                                     onclick="return confirm('Refund this item?')">
-                                    Refund
+                                    Refunds
                                 </a>
 
                             </td>
